@@ -1,0 +1,29 @@
+$font: 'helvetica,arial,sans-serif';
+$color: #eee;
+
+html {
+	background:$color;
+}
+
+h1,h2,h3,h4,h5,h6,p,a,li {
+	font-family:$font;
+}
+
+nav {
+	position:fixed;
+	display:block;
+	width:100%;
+	background:darken($color,2);
+	padding:20px 0;
+	color:white;
+	ul.left {
+		float:left;
+	}
+	ul.right {
+		float:right;
+	}
+	ul li {
+		float:left;
+		color:darken($color,80);
+	}
+}
