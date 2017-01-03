@@ -8408,24 +8408,24 @@ em {
   background-color: white;
 }
 
+/*
 .donut {
-  background: url("../img/donutbg.jpg");
-  background-size: cover;
-  background-position: center;
+	background:url('../img/donutbg.jpg');
+	background-size:cover;
+	background-position:center;
 }
 
 .shaky {
-  background: url("../img/shakyshrinesbg.jpg");
-  background-size: cover;
-  background-position: center;
+	background:url('../img/shakyshrinesbg.jpg');
+	background-size:cover;
+	background-position:center;
 }
 
 .headshots {
-  background: url("../img/clay.jpg");
-  background-size: cover;
-  background-position: center;
-}
-
+	background:url('../img/clay.jpg');
+	background-size:cover;
+	background-position:center;
+}*/
 .slide img {
   width: 100%;
 }
@@ -8437,7 +8437,8 @@ em {
   height: 100%;
   width: 100%;
   z-index: 0;
-  background: rgba(255, 255, 255, 0.5);
+  /*	background:rgba(255,255,255,.5);
+*/
 }
 
 .slide .inner-padding {
