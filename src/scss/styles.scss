@@ -1,29 +1,74 @@
 $font: 'helvetica,arial,sans-serif';
-$color: #eee;
+$bg-color: #f2f2f2;
+$nav-color: #000000;
+$highlight: #30D7FF;
+
 
 html {
-	background:$color;
+	background:$bg-color;
 }
 
 h1,h2,h3,h4,h5,h6,p,a,li {
-	font-family:$font;
+  font-family: "alternate-gothic-no-3-d",'Alternate Gothic No3 D';
 }
 
-nav {
-	position:fixed;
-	display:block;
-	width:100%;
-	background:darken($color,2);
-	padding:20px 0;
-	color:white;
-	ul.left {
-		float:left;
+.navbar {
+	background:$nav-color;
+	border:none;
+	border-radius:0;
+	.navbar-nav li a, .navbar-brand {
+		color:white;
 	}
-	ul.right {
-		float:right;
+	.nav li a {
+		padding:15px 10px;
 	}
-	ul li {
-		float:left;
-		color:darken($color,80);
+	.navbar-nav li a {
+		font-size:12px;
+		letter-spacing:1px;
+		position:relative;
+		top:2px;
+		&:hover {
+			color:$highlight;
+		}
+		@media only screen and (max-width : 768px) {
+			font-size:14px;
+		}
+	}
+	.navbar-brand {
+		text-transform:uppercase;
+		font-size:20px;
+		position:relative;
+		top:3px;
+		&:hover {
+			color:$highlight;
+		}
+		@media only screen and (max-width : 480px) {
+			font-size:16px;
+    	}
+	}
+	@media only screen and (max-width : 768px) {
+		.navbar-collapse {
+			background:#474747;
+		}
+	}
+	.navbar-collapse {
+		border:none;
+		border-top:none;
+	}
+}
+
+.navbar-default .navbar-toggle {
+	border-color:black;
+	&:hover {
+		background:none;
+		.icon-bar {
+		background-color:$highlight;
+		}
+	}
+	&:focus {
+		background:none;
+	}
+	.icon-bar {
+		background-color:white;
 	}
 }
