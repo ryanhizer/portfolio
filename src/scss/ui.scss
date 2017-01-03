@@ -1,0 +1,19 @@
+.slide img {
+	width:100%;
+}
+
+.slide .tint {
+	display:block;
+	top:0;
+	position:fixed;
+	height:100%;
+	width:100%;
+	z-index:0;
+	background:rgba(255,255,255,.5);
+}
+
+.slide .inner-padding{
+	margin-top:25px;
+	padding:60px;
+	background:white;
+}

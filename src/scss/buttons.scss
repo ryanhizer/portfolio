@@ -1,0 +1,12 @@
+.btn {
+	border:none;
+	outline:none!important;
+}
+
+.btn:focus, .btn:active {
+	outline:none;
+}
+
+.btn .glyphicon {
+	margin-right:5px;
+}

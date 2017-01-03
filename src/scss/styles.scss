@@ -12,20 +12,67 @@ h1,h2,h3,h4,h5,h6,p,a,li {
   font-family: "alternate-gothic-no-3-d",'Alternate Gothic No3 D';
 }
 
+h3, h4, p {
+	font-family:'proxima nova';
+}
+
+h3 {
+	font-size:13px;
+	color:#00A8D1;
+	font-weight:700;
+	&:first-of-type {
+		margin-bottom:0;
+	}
+}
+
+.slide a {
+	font-family:'proxima nova';
+	color:#5a5a5a;
+	text-decoration:underline;
+	font-size:12px;
+	&:hover {
+		color:$highlight;
+	};
+}
+
+h4 {
+	font-size:18;
+	color:#5a5a5a;
+	font-weight:700;
+	margin-top:5px;
+}
+
+p {
+	font-size:12px;
+	color:#5a5a5a;
+	font-weight:400;
+}
+
+em {
+	font-style:italic;
+}
+
 .navbar {
 	background:$nav-color;
+	position:fixed;
+	z-index:999;
+	width:100%;
 	border:none;
 	border-radius:0;
+	margin-bottom:0;
 	.navbar-nav li a, .navbar-brand {
 		color:white;
 	}
 	.nav li a {
-		padding:15px 10px;
+		@media only screen and (max-width : 768px) {
+			padding:15px 15px;
+		}
 	}
 	.navbar-nav li a {
 		font-size:12px;
 		letter-spacing:1px;
 		position:relative;
+		text-transform:uppercase;
 		top:2px;
 		&:hover {
 			color:$highlight;
@@ -36,9 +83,17 @@ h1,h2,h3,h4,h5,h6,p,a,li {
 	}
 	.navbar-brand {
 		text-transform:uppercase;
-		font-size:20px;
 		position:relative;
-		top:3px;
+		span {
+			line-height:.8em;
+			display:block;
+			font-size:1.1em;
+			page-break-after:always;
+			&:nth-child(2) {
+				font-size:.9em;
+				letter-spacing:0px;
+			}
+		}
 		&:hover {
 			color:$highlight;
 		}
@@ -71,4 +126,22 @@ h1,h2,h3,h4,h5,h6,p,a,li {
 	.icon-bar {
 		background-color:white;
 	}
+}
+
+.donut {
+	background:url('../img/donutbg.jpg');
+	background-size:cover;
+	background-position:center;
+}
+
+.shaky {
+	background:url('../img/shakyshrinesbg.jpg');
+	background-size:cover;
+	background-position:center;
+}
+
+.headshots {
+	background:url('../img/clay.jpg');
+	background-size:cover;
+	background-position:center;
 }
