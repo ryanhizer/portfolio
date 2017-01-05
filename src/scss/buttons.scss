@@ -10,3 +10,58 @@
 .btn .glyphicon {
 	margin-right:5px;
 }
+
+/*---filters---*/
+
+#filters {
+
+}
+
+.button {
+  font-family:roboto!important;
+  display: inline-block;
+  padding: 0.5em 0em;
+  background: transparentize($highlight,1);
+  border: none;
+  border-radius: 7px;
+  color: transparentize(white,.7);
+  font-family: sans-serif;
+  /*width:100%;*/
+  font-size: 16px;
+  cursor: pointer;
+  text-align:left;
+  border-left:none;
+  transition:all .2s ease-out;
+  border-bottom:4px solid transparentize($highlight,1);
+}
+
+.button:hover {
+  color: transparentize(white,.4);
+  border-bottom:4px solid transparentize(white,.9);
+}
+
+.button:active,
+.button.is-checked {
+  color:white;
+  border-bottom:4px solid $highlight;
+}
+
+/* ---- button-group ---- */
+
+.button-group {
+  margin-bottom: 20px;
+}
+
+.button-group:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.button-group .button {
+  float: left;
+  display:inline-block;
+  border-radius: 0;
+  margin-left: 1em;
+  margin-right: 1em;
+}

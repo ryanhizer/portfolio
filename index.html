@@ -47,10 +47,10 @@
 		    		<div class="container">
 		    			<div class="row">
 		    				<div class="clearfix">
-			    				<div class="col-sm-6">
+			    				<div class="col-sm-7">
 			    					<img src="img/donut.jpg" />
 			    				</div>
-			    				<div class="col-sm-6">
+			    				<div class="col-sm-5">
 									<h3>Photography, Photo Editing, Type/Layout</h3>
 			    					<h4>Garbage Days, <em>Donut of the Heart</em></h4>
 			    					<p>Cover art for a 2014 Valentine's Day compilation released by indie record label <a target="_blank" href="https://garbagedays.bandcamp.com">Garbage Days</a>.</p>
@@ -63,10 +63,10 @@
 		    		<div class="container">
 		    			<div class="row">
 		    				<div class="clearfix">
-			    				<div class="col-sm-6">
+			    				<div class="col-sm-7">
 			    					<img src="img/shakyshrines.jpg" />
 			    				</div>
-			    				<div class="col-sm-6">
+			    				<div class="col-sm-5">
 									<h3>Photography, Photo Editing, Type/Layout</h3>
 			    					<h4>Show Flyer</h4>
 			    					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -80,10 +80,10 @@
 		    		<div class="container">
 		    			<div class="row">
 		    				<div class="clearfix">
-			    				<div class="col-sm-6">
+			    				<div class="col-sm-7">
 			    					<img src="img/clay.jpg" />
 			    				</div>
-			    				<div class="col-sm-6">
+			    				<div class="col-sm-5">
 									<h3>Photography, Photo Editing</h3>
 			    					<h4>Corporate Headshots &amp; Event Photography, ShowClix</em></h4>
 			    					<p></p>
@@ -194,5 +194,64 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/script.min.js"></script>
+		<script>
+			// external js: isotope.pkgd.js
+
+
+			// init Isotope
+			var $grid = $('.grid').isotope({
+			  itemSelector: '.element-item',
+			  layoutMode: 'fitRows',
+			  getSortData: {
+			    name: '.name',
+			    symbol: '.symbol',
+			    number: '.number parseInt',
+			    category: '[data-category]',
+			    weight: function( itemElem ) {
+			      var weight = $( itemElem ).find('.weight').text();
+			      return parseFloat( weight.replace( /[\(\)]/g, '') );
+			    }
+			  }
+			});
+
+			// filter functions
+			var filterFns = {
+			  // show if number is greater than 50
+			  numberGreaterThan50: function() {
+			    var number = $(this).find('.number').text();
+			    return parseInt( number, 10 ) > 50;
+			  },
+			  // show if name ends with -ium
+			  ium: function() {
+			    var name = $(this).find('.name').text();
+			    return name.match( /ium$/ );
+			  }
+			};
+
+			// bind filter button click
+			$('#filters').on( 'click', 'button', function() {
+			  var filterValue = $( this ).attr('data-filter');
+			  // use filterFn if matches value
+			  filterValue = filterFns[ filterValue ] || filterValue;
+			  $grid.isotope({ filter: filterValue });
+			});
+
+			// bind sort button click
+			$('#sorts').on( 'click', 'button', function() {
+			  var sortByValue = $(this).attr('data-sort-by');
+			  $grid.isotope({ sortBy: sortByValue });
+			});
+
+			// change is-checked class on buttons
+			$('.button-group').each( function( i, buttonGroup ) {
+			  var $buttonGroup = $( buttonGroup );
+			  $buttonGroup.on( 'click', 'button', function() {
+			    $buttonGroup.find('.is-checked').removeClass('is-checked');
+			    $( this ).addClass('is-checked');
+			  });
+			});
+			  
+
+		</script>
 	</body>
 </html>
