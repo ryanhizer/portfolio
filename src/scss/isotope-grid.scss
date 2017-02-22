@@ -3,6 +3,7 @@
 
 .grid {
   /*border: 1px solid #333;*/
+  margin-top:90px;
 }
 
 /* clear fix */
@@ -17,23 +18,26 @@
 .element-item {
   position: relative;
   float: left;
-  width: 30%;
+  width: 33.3333%;
   height: 200px;
-  margin: 1.666666%;
   color: #262524;
   @media only screen and (max-width : 768px) {
-    width:45%;
-    margin:2.5%;
+    width:50%;
   }
 }
 
 .element-item .info {
   display:block;
+  height:100%;
   width:100%;
-  background:transparentize($nav-color,.2);
+  background:transparentize(#000,.5);
   position:absolute;
+  opacity:0;
   top:0;
   padding:10px;
+  line-height:100%;
+  text-align:center;
+  margin:auto;
   h3 {
     margin:0;
     padding:0;
