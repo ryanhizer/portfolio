@@ -146,84 +146,95 @@ em {
 	}
 	text-align:center;
 }
-
+$bg-size:120%;
 .donut {
 	background:url('../img/donut.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .shakyshrines {
 	background:url('../img/shakyshrinesbg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .headshots {
 	background:url('../img/clay.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .traveldeeper {
 	background:url('../img/traveldeeperbg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .simplyyogurt {
 	background:url('../img/simplyyogurtbg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .lexalytics {
 	background:url('../img/lexalyticsbg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .showclix {
 	background:url('../img/showclixbg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .dead2k15 {
 	background:url('../img/2k15bg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .dead2k16 {
 	background:url('../img/2k16bg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .balcony {
 	background:url('../img/balconybg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .auspeed {
 	background:url('../img/auspeedbg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .usbgpgh {
 	background:url('../img/usbgpghbg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
 .appalasian {
 	background:url('../img/appalasianbg.jpg');
-	background-size:100%;
+	background-size:$bg-size;
 	background-position:center;
 }
-
+.element-item, .element-item.info {
+	@include transition(all .05s ease-out);
+	translateZ:1;
+}
 .element-item:hover {
-	background-size:105%;
-	@include transition(all .2s ease-in-out);
+	background-size:100%;
+	translateZ:1;
+	@include transition(all .3s ease-out);
 	.info {
 		opacity:1;
-	@include transition(all .2s ease-in-out);
+		@include transition(all .3s ease-out);
 	}
 }
 
+ .element-item .info h3 {
+    color:white;
+    text-align:left;
+    padding-left:20px;
+    font-size:20px;
+ }
+
 /* splash vid */
-video { 
+video {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -237,7 +248,7 @@ video {
 	background-size: cover;
 	transition: 1s opacity;
 }
-.stopfade { 
+.stopfade {
    opacity: .5;
 }
 

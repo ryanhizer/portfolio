@@ -4,6 +4,7 @@
 .grid {
   /*border: 1px solid #333;*/
   margin-top:90px;
+
 }
 
 /* clear fix */
@@ -18,11 +19,16 @@
 .element-item {
   position: relative;
   float: left;
-  width: 33.3333%;
-  height: 200px;
+  width: 25%;
+  height: 25vw;
   color: #262524;
+  @media only screen and (max-width : 960px) {
+    width:33.3333333%;
+    height:33.33333vw;
+  }
   @media only screen and (max-width : 768px) {
     width:50%;
+    height:50vw;
   }
 }
 
@@ -31,6 +37,10 @@
   height:100%;
   width:100%;
   background:transparentize(#000,.5);
+  background: -webkit-radial-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5)); /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5)); /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5)); /* For Firefox 3.6 to 15 */
+  background: radial-gradient(rgba(0,0,0,.2), rgba(0,0,0,.5)); /* Standard syntax */
   position:absolute;
   opacity:0;
   top:0;
@@ -38,12 +48,6 @@
   line-height:100%;
   text-align:center;
   margin:auto;
-  h3 {
-    margin:0;
-    padding:0;
-    /*text-align:center;*/
-    color:white;
-  }
 }
 
 /*
