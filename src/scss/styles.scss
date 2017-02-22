@@ -1,7 +1,7 @@
 $font: 'helvetica,arial,sans-serif';
-$nav-color: #222;
+$nav-color: #fafafa;
 $bg-color: lighten($nav-color,2);
-$highlight: #30D7FF;
+$highlight: #111;
 
 
 html, body {
@@ -10,12 +10,14 @@ html, body {
 
 h1,h2,h3,h4,h5,h6,p,a,li {
   font-family: "alternate-gothic-no-3-d",'Alternate Gothic No3 D';
-  color:white;
+  /*font-family: 'abril fatface';*/
+  color:#333;
 }
+
 
 h3 {
 	font-size:13px;
-	color:white;
+	color:#333;
 	font-weight:500;
 	font-family:roboto;
 	&:first-of-type {
@@ -55,12 +57,14 @@ em {
 	position:fixed;
 	z-index:999;
 	width:100%;
+	top:0;
 	border:none;
 	border-radius:0;
 	margin-bottom:0;
 	padding:20px;
+	/*box-shadow:0 0 200px rgba(0,0,0,1);*/
 	.navbar-nav li a, .navbar-brand {
-		color:white;
+		color:#888;
 	}
 	.nav li a {
 		@media only screen and (max-width : 768px) {
@@ -142,69 +146,163 @@ em {
 	}
 	text-align:center;
 }
-
+$bg-size:120%;
 .donut {
 	background:url('../img/donut.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .shakyshrines {
 	background:url('../img/shakyshrinesbg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .headshots {
 	background:url('../img/clay.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .traveldeeper {
 	background:url('../img/traveldeeperbg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .simplyyogurt {
 	background:url('../img/simplyyogurtbg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .lexalytics {
 	background:url('../img/lexalyticsbg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .showclix {
 	background:url('../img/showclixbg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .dead2k15 {
 	background:url('../img/2k15bg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .dead2k16 {
 	background:url('../img/2k16bg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .balcony {
 	background:url('../img/balconybg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .auspeed {
 	background:url('../img/auspeedbg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .usbgpgh {
 	background:url('../img/usbgpghbg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
 }
 .appalasian {
 	background:url('../img/appalasianbg.jpg');
-	background-size:cover;
+	background-size:$bg-size;
 	background-position:center;
+}
+.element-item, .element-item.info {
+	@include transition(all .05s ease-out);
+	translateZ:1;
+}
+.element-item:hover {
+	background-size:100%;
+	translateZ:1;
+	@include transition(all .3s ease-out);
+	.info {
+		opacity:1;
+		@include transition(all .3s ease-out);
+	}
+}
+
+ .element-item .info h3 {
+    color:white;
+    text-align:left;
+    padding-left:20px;
+    font-size:20px;
+ }
+
+/* splash vid */
+video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+	background: url('//demosthenes.info/assets/images/polina.jpg') no-repeat;
+	background-size: cover;
+	transition: 1s opacity;
+}
+.stopfade {
+   opacity: .5;
+}
+
+.tint {
+	position:fixed;
+	height:auto;
+	width:100%;
+	bottom:0;
+	top:0;
+	left:0;
+	position:absolute;
+	background:transparentize(black,.2);
+	.screen {
+		background:url(../img/screen.png);
+		opacity:.5;
+		background-size:cover;
+		position:absolute;
+		z-index:998;
+		height:100%;
+		width:100%;
+
+
+	}
+	h1 {
+		text-align:left;
+		/*text-transform:uppercase;*/
+		font-size:150px;
+		margin-top:0;
+		line-height:80px;
+	}
+	h2 {
+		left:180px;
+		top:-15px;
+		position:relative;
+		font-size:40px;
+	}
+	.absolute-center {
+	  position:absolute;
+	  z-index:999;
+	  width:100%;
+	  height:100px;
+	  top:50%;
+	  left:50%;
+	  margin-left:-50%;
+	  margin-top:-50px;
+	  padding:20px;
+	}
+	ul {
+		position:absolute;
+		right:20px;
+		bottom:20px;
+		/*text-align:center;*/
+		li {
+			text-align:right;
+		}
+	}
 }

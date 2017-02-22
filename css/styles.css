@@ -8267,17 +8267,18 @@ html.fp-enabled,
 }
 
 html, body {
-  background: #272727;
+  background: white;
 }
 
 h1, h2, h3, h4, h5, h6, p, a, li {
   font-family: "alternate-gothic-no-3-d",'Alternate Gothic No3 D';
-  color: white;
+  /*font-family: 'abril fatface';*/
+  color: #333;
 }
 
 h3 {
   font-size: 13px;
-  color: white;
+  color: #333;
   font-weight: 500;
   font-family: roboto;
 }
@@ -8294,7 +8295,7 @@ h3:first-of-type {
 }
 
 .slide a:hover {
-  color: #30D7FF;
+  color: #111;
 }
 
 h4 {
@@ -8315,18 +8316,20 @@ em {
 }
 
 .navbar {
-  background: #222;
+  background: #fafafa;
   position: fixed;
   z-index: 999;
   width: 100%;
+  top: 0;
   border: none;
   border-radius: 0;
   margin-bottom: 0;
   padding: 20px;
+  /*box-shadow:0 0 200px rgba(0,0,0,1);*/
 }
 
 .navbar .navbar-nav li a, .navbar .navbar-brand {
-  color: white;
+  color: #888;
 }
 
 @media only screen and (max-width: 768px) {
@@ -8344,7 +8347,7 @@ em {
 }
 
 .navbar .navbar-nav li a:hover {
-  color: #30D7FF;
+  color: #111;
 }
 
 @media only screen and (max-width: 768px) {
@@ -8373,7 +8376,7 @@ em {
 }
 
 .navbar .navbar-brand:hover {
-  color: #30D7FF;
+  color: #111;
 }
 
 @media only screen and (max-width: 480px) {
@@ -8396,7 +8399,7 @@ em {
 }
 
 .navbar-default .navbar-toggle {
-  border-color: #222;
+  border-color: #fafafa;
 }
 
 .navbar-default .navbar-toggle:hover {
@@ -8404,7 +8407,7 @@ em {
 }
 
 .navbar-default .navbar-toggle:hover .icon-bar {
-  background-color: #30D7FF;
+  background-color: #111;
 }
 
 .navbar-default .navbar-toggle:focus {
@@ -8430,80 +8433,194 @@ em {
 
 .donut {
   background: url("../img/donut.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .shakyshrines {
   background: url("../img/shakyshrinesbg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .headshots {
   background: url("../img/clay.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .traveldeeper {
   background: url("../img/traveldeeperbg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .simplyyogurt {
   background: url("../img/simplyyogurtbg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .lexalytics {
   background: url("../img/lexalyticsbg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .showclix {
   background: url("../img/showclixbg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .dead2k15 {
   background: url("../img/2k15bg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .dead2k16 {
   background: url("../img/2k16bg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .balcony {
   background: url("../img/balconybg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .auspeed {
   background: url("../img/auspeedbg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .usbgpgh {
   background: url("../img/usbgpghbg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
 }
 
 .appalasian {
   background: url("../img/appalasianbg.jpg");
-  background-size: cover;
+  background-size: 120%;
   background-position: center;
+}
+
+.element-item, .element-item.info {
+  -webkit-transition: all 0.05s ease-out;
+  -moz-transition: all 0.05s ease-out;
+  -ms-transition: all 0.05s ease-out;
+  -o-transition: all 0.05s ease-out;
+  transition: all 0.05s ease-out;
+  translateZ: 1;
+}
+
+.element-item:hover {
+  background-size: 100%;
+  translateZ: 1;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.element-item:hover .info {
+  opacity: 1;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.element-item .info h3 {
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 20px;
+}
+
+/* splash vid */
+video {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  transform: translateX(-50%) translateY(-50%);
+  background: url("//demosthenes.info/assets/images/polina.jpg") no-repeat;
+  background-size: cover;
+  transition: 1s opacity;
+}
+
+.stopfade {
+  opacity: .5;
+}
+
+.tint {
+  position: fixed;
+  height: auto;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.tint .screen {
+  background: url(../img/screen.png);
+  opacity: .5;
+  background-size: cover;
+  position: absolute;
+  z-index: 998;
+  height: 100%;
+  width: 100%;
+}
+
+.tint h1 {
+  text-align: left;
+  /*text-transform:uppercase;*/
+  font-size: 150px;
+  margin-top: 0;
+  line-height: 80px;
+}
+
+.tint h2 {
+  left: 180px;
+  top: -15px;
+  position: relative;
+  font-size: 40px;
+}
+
+.tint .absolute-center {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  height: 100px;
+  top: 50%;
+  left: 50%;
+  margin-left: -50%;
+  margin-top: -50px;
+  padding: 20px;
+}
+
+.tint ul {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  /*text-align:center;*/
+}
+
+.tint ul li {
+  text-align: right;
 }
 
 .slide img {
@@ -8530,6 +8647,7 @@ em {
 /* ---- isotope ---- */
 .grid {
   /*border: 1px solid #333;*/
+  margin-top: 90px;
 }
 
 /* clear fix */
@@ -8543,33 +8661,45 @@ em {
 .element-item {
   position: relative;
   float: left;
-  width: 30%;
-  height: 200px;
-  margin: 1.666666%;
+  width: 25%;
+  height: 25vw;
   color: #262524;
+}
+
+@media only screen and (max-width: 960px) {
+  .element-item {
+    width: 33.3333333%;
+    height: 33.33333vw;
+  }
 }
 
 @media only screen and (max-width: 768px) {
   .element-item {
-    width: 45%;
-    margin: 2.5%;
+    width: 50%;
+    height: 50vw;
   }
 }
 
 .element-item .info {
   display: block;
+  height: 100%;
   width: 100%;
-  background: rgba(34, 34, 34, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+  background: -webkit-radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+  /* Safari 5.1 to 6.0 */
+  background: -o-radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+  /* For Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+  /* For Firefox 3.6 to 15 */
+  background: radial-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5));
+  /* Standard syntax */
   position: absolute;
+  opacity: 0;
   top: 0;
   padding: 10px;
-}
-
-.element-item .info h3 {
-  margin: 0;
-  padding: 0;
-  /*text-align:center;*/
-  color: white;
+  line-height: 100%;
+  text-align: center;
+  margin: auto;
 }
 
 /*
@@ -8601,7 +8731,7 @@ em {
   font-family: roboto !important;
   display: inline-block;
   padding: 0.5em 0em;
-  background: rgba(48, 215, 255, 0);
+  background: rgba(17, 17, 17, 0);
   border: none;
   border-radius: 7px;
   color: rgba(255, 255, 255, 0.3);
@@ -8612,7 +8742,7 @@ em {
   text-align: left;
   border-left: none;
   transition: all .2s ease-out;
-  border-bottom: 4px solid rgba(48, 215, 255, 0);
+  border-bottom: 4px solid rgba(17, 17, 17, 0);
 }
 
 .button:hover {
@@ -8623,7 +8753,7 @@ em {
 .button:active,
 .button.is-checked {
   color: white;
-  border-bottom: 4px solid #30D7FF;
+  border-bottom: 4px solid #111;
 }
 
 /* ---- button-group ---- */
@@ -8643,4 +8773,24 @@ em {
   border-radius: 0;
   margin-left: 1em;
   margin-right: 1em;
+}
+
+.cta {
+  /*padding:15px 25px 10px;*/
+  /*border:3px solid white;*/
+  font-size: 20px;
+  /*text-transform:uppercase;*/
+  letter-spacing: 1px;
+  transition: all .2s ease-out;
+  padding: 0;
+}
+
+.cta:first-of-type {
+  /*margin-right:20px;*/
+}
+
+.cta:hover, .cta:active {
+  /*background:white;*/
+  color: #111;
+  text-decoration: underline;
 }
